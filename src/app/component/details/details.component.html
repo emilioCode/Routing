@@ -1,0 +1,20 @@
+<div style="width: auto;">
+    <div style="width: 50%; float: left;" >
+        <app-about></app-about>
+    </div>
+
+    <div style="width: 50%; float:right;" class="div_form center">
+        <div *ngIf="show">
+            <div>
+                <h4>#{{photo.id}}</h4>
+                <p>{{photo.title}}</p>
+                    
+                <img [src]="[photo.url]" width="150px" title="url"/>
+             
+                <br/>
+                <img src="{{photo.thumbnailUrl}}" width="150px" title="thumbnailUrl"/>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let photo of photos" >
+        <a [routerLink]="['/details',getStrinify(photo)]">{{photo.title}}</a>
+    </li> 
+ </ul>

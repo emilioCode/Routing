@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { ResetComponent } from './component/reset/reset.component';
 import { NotFoundComponent } from './component/not-found/not-found.component';
+import { AboutComponent } from './component/about/about.component';
+import { DetailsComponent } from './component/details/details.component';
 
 const appRoutes: Routes=[
   {path:'', redirectTo:'login', pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'reset-password',component: ResetComponent},
-  {path:'**',component: NotFoundComponent},
+  {path:'details',component:DetailsComponent},
+  {path:'details/:object', component:DetailsComponent},
+  {path:'**',component: NotFoundComponent},//at last always
 ]
 @NgModule({
   declarations: [
@@ -19,6 +23,8 @@ const appRoutes: Routes=[
     LoginComponent,
     ResetComponent,
     NotFoundComponent,
+    AboutComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

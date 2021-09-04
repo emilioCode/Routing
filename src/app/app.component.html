@@ -9,11 +9,14 @@
 <div class="center">
   <h1>{{ title }}</h1>
 </div>
-<nav>
+<nav class="center">
   <a routerLink="login" routerLinkActive="active">Login</a> |
-  <a routerLink="reset-password" routerLinkActive="active">I forgot the password</a>
+  <a routerLink="reset-password" routerLinkActive="active">Reset password</a> |
+  <a routerLink="details" routerLinkActive="active">About</a>
 </nav>
+<br/><br/>
 <router-outlet></router-outlet>
+
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
