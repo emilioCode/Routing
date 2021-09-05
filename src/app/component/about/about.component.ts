@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
     albumId:0
   }
 
-  photos = [{
+  photos:Photo[] = [{
     "albumId": 1,
     "id": 1,
     "title": "accusamus beatae ad facilis cum similique qui sunt",
