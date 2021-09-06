@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  auth:any;
+  constructor(private authService:AuthService) {
+    this.auth = authService;
+  }    
 
   ngOnInit(): void {
+  }
+
+  changeStatus(){
+    this.authService.changeAuth();
   }
 
 }

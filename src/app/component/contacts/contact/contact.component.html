@@ -4,6 +4,12 @@
 </p>
 <a routerLink="/contact/form">Contact form here</a>
 
+<div>
+    <br/>
+<button (click)="changeStatus()" *ngIf="!auth.autorized">Autorizar acceso a Menu</button>
+<button (click)="changeStatus()" *ngIf="auth.autorized">Desautorizar acceso a Menu</button>
+</div>
+
 <!-- Child routes -->
 <div>
     <router-outlet></router-outlet>
